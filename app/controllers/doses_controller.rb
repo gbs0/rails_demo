@@ -29,7 +29,6 @@ class DosesController < ApplicationController
 
   def set_dose
 		@dose = Dose.find(params[:dose_id])
-		p @dose
   end
 end
 

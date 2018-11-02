@@ -313,3 +313,355 @@ ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
   
 app/views/doses/_new.html.erb:2:in `_app_views_doses__new_html_erb__128924327644031995_70353638263220'
 app/views/cocktails/show.html.erb:33:in `_app_views_cocktails_show_html_erb___417572629172734063_70353638756600'
+Started GET "/cocktails/" for 127.0.0.1 at 2018-11-02 17:19:58 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (4.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 74ms (Views: 64.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/cocktails/" for 127.0.0.1 at 2018-11-02 17:23:08 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 5473ms (Views: 5468.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2018-11-02 17:23:20 -0200
+Processing by CocktailsController#new as HTML
+  Rendering cocktails/new.html.erb within layouts/application
+  Rendered cocktails/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cocktails" for 127.0.0.1 at 2018-11-02 17:23:29 -0200
+Processing by CocktailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRtNdUZU7WjZtT74FNbVDbD++CPm4Tr1ezqxkdC55gpLbGJbOTK/qFAyIu9hItXsTtppYpfiYo8CRbfBus+VoA==", "cocktail"=>{"name"=>"Cachaça"}, "commit"=>"Create Cocktail"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Cachaça"], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Create (0.9ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cachaça"], ["created_at", "2018-11-02 19:23:29.484546"], ["updated_at", "2018-11-02 19:23:29.484546"]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+Redirected to http://localhost:3000/cocktails/3
+Completed 302 Found in 23ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/cocktails/3" for 127.0.0.1 at 2018-11-02 17:23:29 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:66
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.4ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+  ↳ app/views/cocktails/show.html.erb:18
+  Rendered doses/_new.html.erb (3.5ms)
+  Rendered cocktails/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h3>Add a new dose</h3>
+    2: <%= simple_form_for [cocktail, dose] do |f| %>
+    3:   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    4:   <%= f.input :description %>
+    5:   <%= f.button :submit, class: "btn btn-primary" %>
+  
+app/views/doses/_new.html.erb:2:in `_app_views_doses__new_html_erb__128924327644031995_70353638785700'
+app/views/cocktails/show.html.erb:33:in `_app_views_cocktails_show_html_erb___417572629172734063_70353596338300'
+Started GET "/cocktails/" for 127.0.0.1 at 2018-11-02 17:28:47 -0200
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (3.2ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (1436.3ms)
+Completed 200 OK in 1521ms (Views: 1494.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2018-11-02 17:28:52 -0200
+Processing by CocktailsController#new as HTML
+  Rendering cocktails/new.html.erb within layouts/application
+  Rendered cocktails/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 114ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cocktails" for 127.0.0.1 at 2018-11-02 17:28:57 -0200
+Processing by CocktailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6iGun9lIJeiN1f70n6DgjyP+B1kwyMuEQSZ+z1vxGNiQVoGxpi53KARS4uPqVOBu3dqWGEHLk/44WXifMYdrcg==", "cocktail"=>{"name"=>"Rafa braga"}, "commit"=>"Create Cocktail"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Rafa braga"], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Create (18.8ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rafa braga"], ["created_at", "2018-11-02 19:28:57.903626"], ["updated_at", "2018-11-02 19:28:57.903626"]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+Redirected to http://localhost:3000/cocktails/36
+Completed 302 Found in 36ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/cocktails/36" for 127.0.0.1 at 2018-11-02 17:28:57 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:66
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (13.9ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 36]]
+  ↳ app/views/cocktails/show.html.erb:18
+  Rendered doses/_new.html.erb (8.1ms)
+  Rendered cocktails/show.html.erb within layouts/application (41.2ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 17.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h3>Add a new dose</h3>
+    2: <%= simple_form_for [cocktail, dose] do |f| %>
+    3:   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    4:   <%= f.input :description %>
+    5:   <%= f.button :submit, class: "btn btn-primary" %>
+  
+app/views/doses/_new.html.erb:2:in `_app_views_doses__new_html_erb___3676478550924925115_70303500028520'
+app/views/cocktails/show.html.erb:33:in `_app_views_cocktails_show_html_erb__1234799191785056074_70303534188200'
+Started PUT "/__web_console/repl_sessions/9a2d1e92ef3e574e41f73d3a58526dee" for 127.0.0.1 at 2018-11-02 17:29:17 -0200
+Started PUT "/__web_console/repl_sessions/9a2d1e92ef3e574e41f73d3a58526dee" for 127.0.0.1 at 2018-11-02 17:29:19 -0200
+Started PUT "/__web_console/repl_sessions/9a2d1e92ef3e574e41f73d3a58526dee" for 127.0.0.1 at 2018-11-02 17:29:26 -0200
+Started GET "/cocktails/36" for 127.0.0.1 at 2018-11-02 17:33:32 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:67
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (1.3ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 36]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (2.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (30.9ms)
+  Rendered cocktails/show.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 149ms (Views: 84.5ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/cocktails/36" for 127.0.0.1 at 2018-11-02 17:33:38 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:67
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.7ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 36]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (1.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (16.9ms)
+  Rendered cocktails/show.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 85ms (Views: 78.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:35:04 -0200
+Processing by DosesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JcnS8tlSXl/nxCSyOBkP87VJ3zrzdZVZypwGG4Ne6OryqGDPUG3JsVZU9D+z2BtjLenhkcWbo1LQ0iB5ZQJbaA==", "dose"=>{"ingredient_id"=>"", "description"=>"Muiy arruiba"}, "commit"=>"Create Dose", "cocktail_id"=>"36"}
+  [1m[36mCocktail Load (1.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mDose Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" IS NULL LIMIT $2[0m  [["cocktail_id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/doses_controller.rb:12
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template doses/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/gpineappleb/code/gbs0/rails_demo/app/views"
+):
+  
+app/controllers/doses_controller.rb:15:in `create'
+Started POST "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:51:10 -0200
+Processing by DosesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JcnS8tlSXl/nxCSyOBkP87VJ3zrzdZVZypwGG4Ne6OryqGDPUG3JsVZU9D+z2BtjLenhkcWbo1LQ0iB5ZQJbaA==", "dose"=>{"ingredient_id"=>"", "description"=>"Muiy arruiba"}, "commit"=>"Create Dose", "cocktail_id"=>"36"}
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mDose Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" IS NULL LIMIT $2[0m  [["cocktail_id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/doses_controller.rb:12
+No template found for DosesController#create, rendering head :no_content
+Completed 204 No Content in 156ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:51:14 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cocktails/36/doses"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:51:45 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cocktails/36/doses"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:51:50 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cocktails/36/doses"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:51:55 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cocktails/36/doses"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cocktails/36/doses" for 127.0.0.1 at 2018-11-02 17:52:09 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cocktails/36/doses"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
