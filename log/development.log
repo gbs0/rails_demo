@@ -211,3 +211,105 @@ Processing by CocktailsController#new as HTML
 Completed 200 OK in 155ms (Views: 78.2ms | ActiveRecord: 56.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-02 15:54:45 -0200
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.4ms)
+Completed 200 OK in 27ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 15:54:52 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  Rendered cocktails/index.html.erb within layouts/application (226.2ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "cocktails.jpg" is not present in the asset pipeline.):
+    1: <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'cocktails.jpg' %>');">
+    2:   <div class="banner-content">
+    3:     <h1>Le Wagon's cocktails</h1>
+    4:     <p>Awesome beverages for developers nightlife</p>
+  
+app/views/cocktails/index.html.erb:1:in `_app_views_cocktails_index_html_erb___2991134805796016497_70353621283740'
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 15:55:54 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (19.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (1371.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/gpineappleb/code/gbs0/rails_demo/public/packs
+Completed 200 OK in 3634ms (Views: 3604.8ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2018-11-02 15:56:13 -0200
+Processing by CocktailsController#new as HTML
+  Rendering cocktails/new.html.erb within layouts/application
+  Rendered cocktails/new.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 193ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cocktails" for 127.0.0.1 at 2018-11-02 15:56:28 -0200
+Processing by CocktailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ee2q854ix9ESekNDOhJK7+2cmZwbWDjhGTLtByWACUZrmoXd4USVEZv9X1RP5koOE7gI3WpbYJtgTetXT/Z67A==", "cocktail"=>{"name"=>"Sry Martuinho"}, "commit"=>"Create Cocktail"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sry Martuinho"], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[36mCocktail Create (22.0ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sry Martuinho"], ["created_at", "2018-11-02 17:56:28.959762"], ["updated_at", "2018-11-02 17:56:28.959762"]]
+  ↳ app/controllers/cocktails_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cocktails_controller.rb:29
+Redirected to http://localhost:3000/cocktails/2
+Completed 302 Found in 40ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/cocktails/2" for 127.0.0.1 at 2018-11-02 15:56:28 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:66
+  Rendering cocktails/show.html.erb within layouts/application
+  Rendered cocktails/show.html.erb within layouts/application (393.8ms)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007ff8f5337f48>:0x00007ff8f7085410>
+Did you mean?  font_path):
+    2:   <div class="row">
+    3:     <div class="col-xs-12">
+    4:       <h1><%= @cocktail.name %></h1>
+    5:       <%= link_to "Back to all cocktails", root_path %>
+    6:     </div>
+    7:   </div>
+    8:   <div class="row">
+  
+app/views/cocktails/show.html.erb:5:in `_app_views_cocktails_show_html_erb___417572629172734063_70353636572180'
+Started GET "/cocktails/2" for 127.0.0.1 at 2018-11-02 15:58:32 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:66
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (13.6ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 2]]
+  ↳ app/views/cocktails/show.html.erb:18
+  Rendered doses/_new.html.erb (4.6ms)
+  Rendered cocktails/show.html.erb within layouts/application (58.7ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 17.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h3>Add a new dose</h3>
+    2: <%= simple_form_for [cocktail, dose] do |f| %>
+    3:   <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    4:   <%= f.input :description %>
+    5:   <%= f.button :submit, class: "btn btn-primary" %>
+  
+app/views/doses/_new.html.erb:2:in `_app_views_doses__new_html_erb__128924327644031995_70353638263220'
+app/views/cocktails/show.html.erb:33:in `_app_views_cocktails_show_html_erb___417572629172734063_70353638756600'
