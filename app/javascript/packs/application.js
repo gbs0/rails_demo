@@ -10,18 +10,4 @@
 import 'bootstrap';
 // console.log('Hello World from Webpacker')
 
-document.querySelector("btn btn-primary btn-lg")  => {
- img.addEventListener("click", (event) => {
- 		console.log('Click');
-    scrollToAnchor('');
-  });
-});
-
-
-
-function scrollToAnchor(aid){
-    var someTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-}
-
 

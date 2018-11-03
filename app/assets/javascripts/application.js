@@ -14,3 +14,28 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// document.getElementById("btn")  => {
+//  btn.addEventListener("click", (event) => {
+//  		console.log('Click');
+//     scrollToAnchor('anchor');
+//   });
+// });
+
+document.getElementById("btn")
+btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log(event);
+    // Disabled button
+    scrollToAnchor('anchor')
+});
+
+
+// let btn = document.getElementById("btn")
+// console.log(btn);
+
+function scrollToAnchor(aid){
+    var someTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
