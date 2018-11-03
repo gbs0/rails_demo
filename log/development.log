@@ -1636,3 +1636,820 @@ Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
 Completed 200 OK in 4635ms (Views: 4631.6ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:38:18 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (9.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 377ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4690ms (Views: 4685.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:39:00 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (9.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 395ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4655ms (Views: 4650.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:40:44 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (8.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 378ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4713ms (Views: 4706.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:46:34 -0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (3.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (4995.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 456ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 6855ms (Views: 6827.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:48:55 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (9.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 373ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4507ms (Views: 4500.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:49:44 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (8.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 377ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4506ms (Views: 4500.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:52:56 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (7.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 371ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4643ms (Views: 4639.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:53:49 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (8.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 362ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4588ms (Views: 4582.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:54:16 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (4.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 366ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4550ms (Views: 4546.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:55:59 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (5.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 363ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4507ms (Views: 4501.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:56:23 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (5.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 364ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4512ms (Views: 4508.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-02 23:58:06 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (7.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 366ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4516ms (Views: 4511.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:00:03 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (5.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 371ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4490ms (Views: 4486.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:00:27 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:11
+  Rendered cocktails/index.html.erb within layouts/application (5.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 377ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1516ms (Views: 1511.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:01:57 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (7.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 351ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1462ms (Views: 1458.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:02:12 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (4.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 395ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4551ms (Views: 4547.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:04:08 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (3.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 366ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1488ms (Views: 1485.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:05:20 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (4.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 362ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1512ms (Views: 1508.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:17:55 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (24.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 467ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 5495ms (Views: 5490.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:19:19 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (2.1ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 1279ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ition: sticky; ": expected "}", was "!important  "):
+     6:     <%= csp_meta_tag %>
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/components/_navbar.scss:3
+app/assets/stylesheets/components/_index.scss:3
+app/assets/stylesheets/application.scss:14
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___3150095060060899411_70164794141700'
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:19:39 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (5.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 379ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4561ms (Views: 4557.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:21:10 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (6.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 379ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4783ms (Views: 4778.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:23:39 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (14.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 404ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1629ms (Views: 1623.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:24:47 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (13.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 404ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 4702ms (Views: 4696.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-03 00:27:41 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (16.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 0cf6225ccfdabbd0fe92
+Version: webpack 3.12.0
+Time: 462ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-cc74172154eec5774f51.js    3.15 kB       0  [emitted]  application
+application-cc74172154eec5774f51.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.js 402 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed: SyntaxError: Unexpected token, expected ; (13:50)
+
+  11 | // console.log('Hello World from Webpacker')
+  12 | 
+> 13 | document.querySelector("btn btn-primary btn-lg")  => {
+     |                                                   ^
+  14 |  img.addEventListener("click", (event) => {
+  15 |  		console.log('Click');
+  16 |     scrollToAnchor('');
+
+
+Completed 200 OK in 1978ms (Views: 1964.0ms | ActiveRecord: 0.4ms)
+
+
