@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
 Cocktail.destroy_all
+Ingredient.destroy_all
 
 puts 'Creating cocktails...'
 cocktails_attributes = [
@@ -14,8 +15,14 @@ cocktails_attributes = [
     name:         'Spicy Grand Margarita'
   },
   {
-    name:         'Pizza East'
+    name:         'Sex On The Beach'
   }
 ]
 Cocktail.create!(cocktails_attributes)
+puts 'Finished!'
+
+puts 'Creating ingredients...'
+10.times do 
+	Ingredient.create(name: Faker::Food.fruits)
+end
 puts 'Finished!'
