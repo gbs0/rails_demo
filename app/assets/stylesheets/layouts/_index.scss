@@ -10,7 +10,14 @@
 }
 
 #add-btn {
-	padding: 45px;
+	padding: 20px;
+	padding-right: 45px;
+	padding-left: 45px;
 	display: list-item;
 	opacity: 0.78;
+}
+
+#back-ui {
+	display: flex;
+  flex-direction: column;
 }

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12">
       <h1><%= @cocktail.name %></h1>
-      <%= link_to "Back to all cocktails", cocktails_path %>
+      <%= link_to "Back to all cocktails", cocktails_path, class: "btn btn-success", id:"back_ui"%>
     </div>
   </div>
   <div class="row">
@@ -13,7 +13,7 @@
           <thead>
             <th>Ingredient</th>
             <th>Description</th>
-            <th>Action</th>
+            <th>Quantity</th>
           </thead>
           <% @cocktail.doses.each do |dose| %>
             <tr>
