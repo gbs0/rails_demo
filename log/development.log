@@ -4585,3 +4585,1615 @@ Processing by CocktailsController#index as HTML
 Completed 200 OK in 96ms (Views: 89.0ms | ActiveRecord: 3.6ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (196.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (159.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (482.9ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (402.6ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCocktails (20181101173121)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173121_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173121"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20181101173302)
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173302_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173302"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDoses (20181101173426)
+  [1m[35m (8.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (22.6ms)[0m  [1m[35mCREATE TABLE "doses" ("id" bigserial primary key, "description" character varying, "cocktail_id" bigint, "ingredient_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48b6f209c2"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+, CONSTRAINT "fk_rails_961afcf26a"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+)[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_cocktail_id" ON "doses"  ("cocktail_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_ingredient_id" ON "doses"  ("ingredient_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173426"]]
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-04 21:36:57.245139"], ["updated_at", "2018-11-04 21:36:57.245139"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (193.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (189.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (397.2ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (373.7ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (179.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (190.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (392.5ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (398.9ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCocktails (20181101173121)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (27.4ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173121_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173121"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20181101173302)
+  [1m[35m (12.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173302_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173302"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDoses (20181101173426)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.2ms)[0m  [1m[35mCREATE TABLE "doses" ("id" bigserial primary key, "description" character varying, "nacionality" character varying, "cocktail_id" bigint, "ingredient_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48b6f209c2"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+, CONSTRAINT "fk_rails_961afcf26a"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+)[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_cocktail_id" ON "doses"  ("cocktail_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_ingredient_id" ON "doses"  ("ingredient_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173426"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-04 21:54:07.516203"], ["updated_at", "2018-11-04 21:54:07.516203"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-04 19:55:52 -0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (2.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (1399.5ms)
+Completed 200 OK in 1505ms (Views: 1482.6ms | ActiveRecord: 3.8ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (176.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (192.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (484.6ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (402.2ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCocktails (20181101173121)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173121_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173121"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20181101173302)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173302_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173302"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDoses (20181101173426)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "doses" ("id" bigserial primary key, "description" character varying, "nacionality" character varying, "cocktail_id" bigint, "ingredient_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48b6f209c2"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+, CONSTRAINT "fk_rails_961afcf26a"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+)[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_cocktail_id" ON "doses"  ("cocktail_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_ingredient_id" ON "doses"  ("ingredient_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173426"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-04 21:58:19.619437"], ["updated_at", "2018-11-04 21:58:19.619437"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-04 19:58:30 -0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (1390.8ms)
+Completed 200 OK in 1485ms (Views: 1455.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-04 19:58:35 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2018-11-04 19:58:37 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.9ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2018-11-04 19:58:39 -0200
+Processing by CocktailsController#new as HTML
+  Rendering cocktails/new.html.erb within layouts/application
+  Rendered cocktails/new.html.erb within layouts/application (217.5ms)
+Completed 200 OK in 295ms (Views: 279.4ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/cocktails" for 127.0.0.1 at 2018-11-04 19:58:42 -0200
+Processing by CocktailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ej/5V/Nt6moS28+qg8bk/aRh6aHgDagNFwEk/8A3QTBoSNZ5jAu4qptc0732MuQcWkV44JEO8HdufiKvqkEymg==", "cocktail"=>{"name"=>"Sry Martuinho"}, "commit"=>"Create Cocktail"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cocktails_controller.rb:31
+  [1m[36mCocktail Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sry Martuinho"], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:31
+  [1m[36mCocktail Create (1.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sry Martuinho"], ["created_at", "2018-11-04 21:58:42.259580"], ["updated_at", "2018-11-04 21:58:42.259580"]]
+  ↳ app/controllers/cocktails_controller.rb:31
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cocktails_controller.rb:31
+Redirected to http://localhost:3000/cocktails/1
+Completed 302 Found in 22ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/cocktails/1" for 127.0.0.1 at 2018-11-04 19:58:42 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.4ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (17.6ms)
+  Rendered cocktails/show.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 115ms (Views: 77.5ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/cocktails/1/doses" for 127.0.0.1 at 2018-11-04 19:58:46 -0200
+Processing by DosesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DBAOPbAkOy1jQ+DSX5yJqaqXYtbXWHb8D85+8HX+YHfbcbwAORusw9LTMF/UXZ05MjdcfeG2QPcVgFiSk6LT9Q==", "dose"=>{"ingredient_id"=>"", "description"=>""}, "commit"=>"Create Dose", "cocktail_id"=>"1"}
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mDose Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" IS NULL LIMIT $2[0m  [["cocktail_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/doses_controller.rb:12
+Redirected to http://localhost:3000/cocktails/1
+Completed 302 Found in 27ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/cocktails/1" for 127.0.0.1 at 2018-11-04 19:58:46 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.5ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (1.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (14.0ms)
+  Rendered cocktails/show.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 75ms (Views: 68.6ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (185.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (189.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (478.6ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (404.7ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCocktails (20181101173121)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173121_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173121"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20181101173302)
+  [1m[35m (13.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173302_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173302"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDoses (20181101173426)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.2ms)[0m  [1m[35mCREATE TABLE "doses" ("id" bigserial primary key, "description" character varying, "nacionality" character varying, "cocktail_id" bigint, "ingredient_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48b6f209c2"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+, CONSTRAINT "fk_rails_961afcf26a"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+)[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_cocktail_id" ON "doses"  ("cocktail_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_ingredient_id" ON "doses"  ("ingredient_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173426"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-04 22:05:54.271298"], ["updated_at", "2018-11-04 22:05:54.271298"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Spicy Grand Margarita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (1.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spicy Grand Margarita"], ["created_at", "2018-11-04 22:18:22.172420"], ["updated_at", "2018-11-04 22:18:22.172420"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Marguierita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Marguierita"], ["created_at", "2018-11-04 22:18:22.185646"], ["updated_at", "2018-11-04 22:18:22.185646"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Drinks"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drinks"], ["created_at", "2018-11-04 22:18:22.193227"], ["updated_at", "2018-11-04 22:18:22.193227"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Gym Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gym Martinho"], ["created_at", "2018-11-04 22:18:22.196898"], ["updated_at", "2018-11-04 22:18:22.196898"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sex On The Beach"], ["created_at", "2018-11-04 22:18:22.200225"], ["updated_at", "2018-11-04 22:18:22.200225"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (1.1ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (1.0ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.3ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.4ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.3ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Spicy Grand Margarita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (2.8ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spicy Grand Margarita"], ["created_at", "2018-11-04 22:20:59.431029"], ["updated_at", "2018-11-04 22:20:59.431029"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Marguierita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Marguierita"], ["created_at", "2018-11-04 22:20:59.438518"], ["updated_at", "2018-11-04 22:20:59.438518"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Drinks"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (2.8ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drinks"], ["created_at", "2018-11-04 22:20:59.442439"], ["updated_at", "2018-11-04 22:20:59.442439"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Gym Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.9ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gym Martinho"], ["created_at", "2018-11-04 22:20:59.449170"], ["updated_at", "2018-11-04 22:20:59.449170"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.6ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sex On The Beach"], ["created_at", "2018-11-04 22:20:59.460645"], ["updated_at", "2018-11-04 22:20:59.460645"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (1.3ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (2.7ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.7ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (1.0ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDose Load (0.3ms)[0m  [1m[34mSELECT "doses".* FROM "doses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Spicy Grand Margarita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spicy Grand Margarita"], ["created_at", "2018-11-04 22:21:33.313546"], ["updated_at", "2018-11-04 22:21:33.313546"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Marguierita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Marguierita"], ["created_at", "2018-11-04 22:21:33.317619"], ["updated_at", "2018-11-04 22:21:33.317619"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Drinks"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drinks"], ["created_at", "2018-11-04 22:21:33.321088"], ["updated_at", "2018-11-04 22:21:33.321088"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Gym Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.6ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gym Martinho"], ["created_at", "2018-11-04 22:21:33.325024"], ["updated_at", "2018-11-04 22:21:33.325024"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sex On The Beach"], ["created_at", "2018-11-04 22:21:33.332886"], ["updated_at", "2018-11-04 22:21:33.332886"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sex On The Beach"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.4ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDose Load (0.2ms)[0m  [1m[34mSELECT "doses".* FROM "doses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Spicy Grand Margarita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spicy Grand Margarita"], ["created_at", "2018-11-04 22:22:24.737432"], ["updated_at", "2018-11-04 22:22:24.737432"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Marguierita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Marguierita"], ["created_at", "2018-11-04 22:22:24.740932"], ["updated_at", "2018-11-04 22:22:24.740932"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Drinks"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drinks"], ["created_at", "2018-11-04 22:22:24.743964"], ["updated_at", "2018-11-04 22:22:24.743964"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Gym Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gym Martinho"], ["created_at", "2018-11-04 22:22:24.746850"], ["updated_at", "2018-11-04 22:22:24.746850"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Dry Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.5ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dry Martinho"], ["created_at", "2018-11-04 22:22:24.750570"], ["updated_at", "2018-11-04 22:22:24.750570"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sake"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sake"], ["created_at", "2018-11-04 22:22:24.757798"], ["updated_at", "2018-11-04 22:22:24.757798"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Snowpeas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Snowpeas"], ["created_at", "2018-11-04 22:22:24.911749"], ["updated_at", "2018-11-04 22:22:24.911749"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Lemon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lemon"], ["created_at", "2018-11-04 22:22:24.915377"], ["updated_at", "2018-11-04 22:22:24.915377"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Mango"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mango"], ["created_at", "2018-11-04 22:22:24.918071"], ["updated_at", "2018-11-04 22:22:24.918071"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Jarrahdale pumpkin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jarrahdale pumpkin"], ["created_at", "2018-11-04 22:22:24.921022"], ["updated_at", "2018-11-04 22:22:24.921022"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Rockmelon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rockmelon"], ["created_at", "2018-11-04 22:22:24.923774"], ["updated_at", "2018-11-04 22:22:24.923774"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Custard Apples Daikon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Custard Apples Daikon"], ["created_at", "2018-11-04 22:22:24.926685"], ["updated_at", "2018-11-04 22:22:24.926685"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cumquat"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cumquat"], ["created_at", "2018-11-04 22:22:24.929457"], ["updated_at", "2018-11-04 22:22:24.929457"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cherries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cherries"], ["created_at", "2018-11-04 22:22:24.932426"], ["updated_at", "2018-11-04 22:22:24.932426"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cranberry"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cranberry"], ["created_at", "2018-11-04 22:22:24.935240"], ["updated_at", "2018-11-04 22:22:24.935240"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Custard Apples Daikon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Limes"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Limes"], ["created_at", "2018-11-04 22:22:24.940558"], ["updated_at", "2018-11-04 22:22:24.940558"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Pears"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pears"], ["created_at", "2018-11-04 22:22:24.943563"], ["updated_at", "2018-11-04 22:22:24.943563"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Tangelo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tangelo"], ["created_at", "2018-11-04 22:22:24.946325"], ["updated_at", "2018-11-04 22:22:24.946325"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Goji Berry"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Goji Berry"], ["created_at", "2018-11-04 22:22:24.949320"], ["updated_at", "2018-11-04 22:22:24.949320"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Plums"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Plums"], ["created_at", "2018-11-04 22:22:24.952215"], ["updated_at", "2018-11-04 22:22:24.952215"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Guava"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Guava"], ["created_at", "2018-11-04 22:22:24.955016"], ["updated_at", "2018-11-04 22:22:24.955016"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Peaches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Peaches"], ["created_at", "2018-11-04 22:22:24.958172"], ["updated_at", "2018-11-04 22:22:24.958172"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Custard Apples"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Custard Apples"], ["created_at", "2018-11-04 22:22:24.962220"], ["updated_at", "2018-11-04 22:22:24.962220"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Papaya"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Papaya"], ["created_at", "2018-11-04 22:22:24.966790"], ["updated_at", "2018-11-04 22:22:24.966790"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Snowpeas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 7], ["ingredient_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 6], ["ingredient_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 3], ["ingredient_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (1.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 2], ["ingredient_id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 9], ["ingredient_id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 5], ["ingredient_id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 2], ["ingredient_id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 5], ["ingredient_id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 10], ["ingredient_id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 7], ["ingredient_id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:22:47 -0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (1447.1ms)
+Completed 200 OK in 1558ms (Views: 1533.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/cocktails/18" for 127.0.0.1 at 2018-11-04 20:22:53 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mCocktail Load (2.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.1ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.9ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 18]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (184.1ms)
+  Rendered cocktails/show.html.erb within layouts/application (206.8ms)
+Completed 200 OK in 335ms (Views: 288.4ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/cocktails/18/doses" for 127.0.0.1 at 2018-11-04 20:23:03 -0200
+Processing by DosesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdqTdpEmFGNDPIkA5R/Shk7SmK0guqPA++sat6FZdjZathuX7Z3PjnSqHpqxPGRsY0lsBpoqrS3/mVVXYVyVJQ==", "dose"=>{"ingredient_id"=>"4", "description"=>"Muiy arruiba"}, "commit"=>"Create Dose", "cocktail_id"=>"18"}
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mIngredient Load (1.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mDose Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 18], ["ingredient_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[36mDose Create (5.5ms)[0m  [1m[32mINSERT INTO "doses" ("description", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Muiy arruiba"], ["cocktail_id", 18], ["ingredient_id", 4], ["created_at", "2018-11-04 22:23:03.398369"], ["updated_at", "2018-11-04 22:23:03.398369"]]
+  ↳ app/controllers/doses_controller.rb:12
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/doses_controller.rb:12
+Redirected to http://localhost:3000/cocktails/18
+Completed 302 Found in 63ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/cocktails/18" for 127.0.0.1 at 2018-11-04 20:23:03 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.6ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 18]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (0.8ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (8.8ms)
+  Rendered cocktails/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 89ms (Views: 72.5ms | ActiveRecord: 2.7ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (196.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (194.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mister-cocktail_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (485.9ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (395.6ms)[0m  [1m[35mCREATE DATABASE "mister-cocktail_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCocktails (20181101173121)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173121_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173121"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateIngredients (20181101173302)
+  [1m[35m (8.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181101173302_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173302"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDoses (20181101173426)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "doses" ("id" bigserial primary key, "description" character varying, "nacionality" character varying, "cocktail_id" bigint, "ingredient_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_48b6f209c2"
+FOREIGN KEY ("cocktail_id")
+  REFERENCES "cocktails" ("id")
+, CONSTRAINT "fk_rails_961afcf26a"
+FOREIGN KEY ("ingredient_id")
+  REFERENCES "ingredients" ("id")
+)[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_cocktail_id" ON "doses"  ("cocktail_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_doses_on_ingredient_id" ON "doses"  ("ingredient_id")[0m
+  ↳ db/migrate/20181101173426_create_doses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181101173426"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-04 22:29:08.455565"], ["updated_at", "2018-11-04 22:29:08.455565"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2162894898600432150)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDose Load (0.5ms)[0m  [1m[34mSELECT "doses".* FROM "doses"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Spicy Grand Margarita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (1.1ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spicy Grand Margarita"], ["created_at", "2018-11-04 22:29:13.278555"], ["updated_at", "2018-11-04 22:29:13.278555"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Marguierita"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Marguierita"], ["created_at", "2018-11-04 22:29:13.287473"], ["updated_at", "2018-11-04 22:29:13.287473"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Drinks"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drinks"], ["created_at", "2018-11-04 22:29:13.294526"], ["updated_at", "2018-11-04 22:29:13.294526"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Gym Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gym Martinho"], ["created_at", "2018-11-04 22:29:13.297962"], ["updated_at", "2018-11-04 22:29:13.297962"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Dry Martinho"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dry Martinho"], ["created_at", "2018-11-04 22:29:13.307330"], ["updated_at", "2018-11-04 22:29:13.307330"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" WHERE "cocktails"."name" = $1 LIMIT $2[0m  [["name", "Sake"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:34
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sake"], ["created_at", "2018-11-04 22:29:13.310290"], ["updated_at", "2018-11-04 22:29:13.310290"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Peaches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Peaches"], ["created_at", "2018-11-04 22:29:13.465213"], ["updated_at", "2018-11-04 22:29:13.465213"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Peaches"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Sultanas"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sultanas"], ["created_at", "2018-11-04 22:29:13.471955"], ["updated_at", "2018-11-04 22:29:13.471955"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cherries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cherries"], ["created_at", "2018-11-04 22:29:13.475050"], ["updated_at", "2018-11-04 22:29:13.475050"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Melon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Melon"], ["created_at", "2018-11-04 22:29:13.478056"], ["updated_at", "2018-11-04 22:29:13.478056"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cherries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Jarrahdale pumpkin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.9ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jarrahdale pumpkin"], ["created_at", "2018-11-04 22:29:13.486690"], ["updated_at", "2018-11-04 22:29:13.486690"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Grapefruit"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grapefruit"], ["created_at", "2018-11-04 22:29:13.496121"], ["updated_at", "2018-11-04 22:29:13.496121"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Lemon"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lemon"], ["created_at", "2018-11-04 22:29:13.503959"], ["updated_at", "2018-11-04 22:29:13.503959"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Cherries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Sprouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sprouts"], ["created_at", "2018-11-04 22:29:13.510896"], ["updated_at", "2018-11-04 22:29:13.510896"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Tomatoes"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tomatoes"], ["created_at", "2018-11-04 22:29:13.513556"], ["updated_at", "2018-11-04 22:29:13.513556"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Kiwi Fruit"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kiwi Fruit"], ["created_at", "2018-11-04 22:29:13.516154"], ["updated_at", "2018-11-04 22:29:13.516154"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Butternut pumpkin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Butternut pumpkin"], ["created_at", "2018-11-04 22:29:13.518990"], ["updated_at", "2018-11-04 22:29:13.518990"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Strawberries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Strawberries"], ["created_at", "2018-11-04 22:29:13.521611"], ["updated_at", "2018-11-04 22:29:13.521611"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Dragonfruit"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Dragonfruit"], ["created_at", "2018-11-04 22:29:13.524212"], ["updated_at", "2018-11-04 22:29:13.524212"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Mulberries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mulberries"], ["created_at", "2018-11-04 22:29:13.527104"], ["updated_at", "2018-11-04 22:29:13.527104"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Custard Apples"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Custard Apples"], ["created_at", "2018-11-04 22:29:13.530412"], ["updated_at", "2018-11-04 22:29:13.530412"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Starfruit"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Starfruit"], ["created_at", "2018-11-04 22:29:13.533616"], ["updated_at", "2018-11-04 22:29:13.533616"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = $1 LIMIT $2[0m  [["name", "Berries"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Berries"], ["created_at", "2018-11-04 22:29:13.536547"], ["updated_at", "2018-11-04 22:29:13.536547"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 10], ["ingredient_id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 8], ["ingredient_id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 2], ["ingredient_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (3.0ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Snuffles was my slave name, you can call me snowball because my fur is pretty and white."], ["nacionality", "Mayotte"], ["cocktail_id", 2], ["ingredient_id", 3], ["created_at", "2018-11-04 22:29:13.567826"], ["updated_at", "2018-11-04 22:29:13.567826"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 9], ["ingredient_id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 3], ["ingredient_id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (0.4ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "I hate to break it to you, but what people call 'love' is just a chemical reaction that compels animals to breed. It hits hard Morty then it slowly fades leaving you stranded in a failing marriage. I did it. Your parents are going to do it. Break the cycle Morty, rise above, focus on science."], ["nacionality", "Kiribati"], ["cocktail_id", 3], ["ingredient_id", 5], ["created_at", "2018-11-04 22:29:13.590490"], ["updated_at", "2018-11-04 22:29:13.590490"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 7], ["ingredient_id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 4], ["ingredient_id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (0.4ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "I like what you got."], ["nacionality", "Oman"], ["cocktail_id", 4], ["ingredient_id", 5], ["created_at", "2018-11-04 22:29:13.599889"], ["updated_at", "2018-11-04 22:29:13.599889"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 1], ["ingredient_id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (0.4ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "That's the difference between you and me, Morty. I never go back to the carpet store."], ["nacionality", "Libyan Arab Jamahiriya"], ["cocktail_id", 1], ["ingredient_id", 7], ["created_at", "2018-11-04 22:29:13.604752"], ["updated_at", "2018-11-04 22:29:13.604752"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 1], ["ingredient_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (0.4ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "I want that Mulan McNugget sauce, Morty!"], ["nacionality", "India"], ["cocktail_id", 1], ["ingredient_id", 3], ["created_at", "2018-11-04 22:29:13.609738"], ["updated_at", "2018-11-04 22:29:13.609738"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "doses" WHERE "doses"."cocktail_id" = $1 AND "doses"."ingredient_id" = $2 LIMIT $3[0m  [["cocktail_id", 6], ["ingredient_id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mDose Create (0.4ms)[0m  [1m[32mINSERT INTO "doses" ("description", "nacionality", "cocktail_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "Having a family doesn't mean that you stop being an individual."], ["nacionality", "Aruba"], ["cocktail_id", 6], ["ingredient_id", 9], ["created_at", "2018-11-04 22:29:13.614923"], ["updated_at", "2018-11-04 22:29:13.614923"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:29:34 -0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gpineappleb/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (1437.7ms)
+Completed 200 OK in 1557ms (Views: 1517.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/cocktails/3" for 127.0.0.1 at 2018-11-04 20:29:39 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.0ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.4ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (1.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (182.5ms)
+  Rendered cocktails/show.html.erb within layouts/application (223.9ms)
+Completed 200 OK in 372ms (Views: 322.3ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:29:42 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (28.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 129ms (Views: 94.7ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/cocktails/1" for 127.0.0.1 at 2018-11-04 20:29:44 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.1ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (0.5ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 1]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (2.8ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (12.8ms)
+  Rendered cocktails/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 95ms (Views: 85.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:29:51 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (12.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 148ms (Views: 131.3ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:29:51 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 192ms (Views: 187.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-04 20:29:51 -0200
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:12
+  Rendered cocktails/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 143ms (Views: 139.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cocktails/3" for 127.0.0.1 at 2018-11-04 20:29:59 -0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCocktail Load (3.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:68
+  [1m[36mCACHE Cocktail Load (0.1ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:13
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mDose Load (1.5ms)[0m  [1m[34mSELECT "doses".* FROM "doses" WHERE "doses"."cocktail_id" = $1[0m  [["cocktail_id", 3]]
+  ↳ app/views/cocktails/show.html.erb:18
+  [1m[36mIngredient Load (1.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mIngredient Load (0.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/doses/_new.html.erb:3
+  Rendered doses/_new.html.erb (15.2ms)
+  Rendered cocktails/show.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 168ms (Views: 125.5ms | ActiveRecord: 9.3ms)
+
+
